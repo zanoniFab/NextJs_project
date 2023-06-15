@@ -1,0 +1,33 @@
+.teamContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.teamContainer a {
+    position: absolute;
+    right: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cardTeam {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.cardTeam img {
+    margin-bottom: 30px;
+}
+
+.cardTeam p {
+    margin-bottom: 30px;
+}

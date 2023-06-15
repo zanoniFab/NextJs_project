@@ -1,5 +1,9 @@
+import styles from "../styles/Footer.module.css"
+
 export default function Footer() {
     return (
-        <p>Desenvolvido por Fabiane Zanoni, 2023</p>
+        <footer className={styles.footer}>
+            <p>Desenvolvido por Fabiane Zanoni, &copy; 2023</p>
+        </footer>
     )
 }

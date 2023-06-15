@@ -1,0 +1,30 @@
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.listContainer .voltar {
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    right: 100px;
+}
+
+.teamList li {
+    list-style: none;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.teamList li img {
+    margin: 0 10px;
+}
+
+.teamList li a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
