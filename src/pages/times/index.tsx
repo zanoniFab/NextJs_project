@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-
+import styles from "../../styles/Times.module.css"
 export async function getStaticProps() {
     const data = await fetch('https://api.cartola.globo.com/clubes');
     const dataJson = await data.json();
@@ -10,20 +9,26 @@ export async function getStaticProps() {
     }
 }
 export default function TeamsList({teams}) {
-    const router = useRouter();
-    const teamId = router.query.teamId;
+
 
     return (
-        <>
-        <Link href='/'>Voltar</Link>
-            <h1>Dados da Api</h1>
+        <div className={styles.listContainer}>
+            <Link className={styles.voltar} href='/'>Voltar</Link>
+            <h1>Times disponíveis para consulta:</h1>
 
-            <ul>
+            <ul className={styles.teamList}>
                 {teams.map((team)=>(
-                    <li><Link href={`/times/${team.id}`}>{team.nome}</Link></li>
+                    <li key={team.id}>
+                        <img
+                            src = {team.escudos["60x60"]} 
+                            width="10"
+                            height="10"
+                            alt="logo time"
+                        />
+                        <Link href={`/times/${team.id}`}>{team.nome}</Link></li>
                 ))}
                 
             </ul>
-        </>
+        </div>
     )
 }

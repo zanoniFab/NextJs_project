@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import styles from "../../styles/teamId.module.css"
 
 
 export async function getStaticProps(context) {
@@ -46,11 +46,14 @@ export async function getStaticPaths() {
 export default function Time({team}) {
 
     return (
-        <>
+        <div className={styles.teamContainer}>
             <Link href="/times">Voltar</Link>
-            <img src={team.escudos["60x60"]}></img>
-            <p> Nome: {team.nome}</p>
-            <p> Abreviação: {team.abreviacao}</p>
-        </>
+            <div className={styles.cardTeam}>
+                <img src={team.escudos["60x60"]}></img>
+                <p> Nome: {team.nome}</p>
+                <p> Abreviação: {team.abreviacao}</p>
+            </div>
+            
+        </div>
     )
 }
