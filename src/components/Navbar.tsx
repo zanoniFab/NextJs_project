@@ -3,8 +3,8 @@ export default function Navbar() {
     return (
         <ul>
           <li>
-            <Link href="/users">
-              Users
+            <Link href="/times">
+              Times de Futebol
             </Link>
           </li>
           <li>
