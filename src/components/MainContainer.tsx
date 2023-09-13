@@ -11,7 +11,7 @@ export default function MainContainer({children}: Props) {
     return (
         <div className={styles.mainContainer}>
             <Navbar/>
-            <div>{children}</div>
+                <div>{children}</div>
             <Footer/>
         </div>
     )

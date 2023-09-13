@@ -1,5 +1,5 @@
-import Link from "next/link";
-import styles from "../../styles/Times.module.css"
+
+import MenuTeams from "@/components/MenuTeams";
 export const getStaticProps = async () => {
     const resp = await fetch("https://api.cartola.globo.com/clubes");
     var data = await resp.json();
@@ -24,25 +24,9 @@ export default function TeamsList({dataArray}) {
     
 
     return (
-        <div className={styles.boxList}>
-            <h3>Times disponíveis para consulta:</h3>
-
-            <div className={styles.listContainer}>
-                <ul className={styles.teamList}>
-                    {listaOrdenada.map((clube)=>
-                        <li key={clube.id} >
-                            <img
-                            src = {clube.escudos["60x60"]} 
-                            width="10"
-                            height="10"
-                            alt="logo time"
-                            />
-                            <Link href={`/times/${clube.id}`}>{clube.nome}</Link>
-                        </li>
-                    )}
-                </ul>
-            </div>
-        </div>
+    <div>
+        <MenuTeams listaTimes={listaOrdenada}></MenuTeams>
+    </div>
     )
 
 }
