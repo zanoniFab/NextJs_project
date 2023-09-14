@@ -10,6 +10,8 @@
     margin: 10px;
     text-align: center;
     font-size: 14px;
+    text-decoration: none;
+    color: black;
 }
 .teamCard:hover {
     transition: .35s;
