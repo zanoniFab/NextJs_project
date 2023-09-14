@@ -1,0 +1,21 @@
+.teamCard {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 3px 0 black;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.teamCard p {
+    margin: 3px 0;
+}
+
+.teamCard img {
+    margin-bottom: 8px;
+}

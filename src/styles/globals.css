@@ -8,4 +8,12 @@
 body {
   background-color: rgb(211, 211, 211);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.main-container{
+  min-height: 70vh;
+  flex: 1 1 0;
+}
+
